@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Exercise 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function math(val) {
+            document.getElementById("hasil").value += val
+        }
+
+        function solve() {
+            let x = document.getElementById("hasil").value
+            let y = eval(x)
+            document.getElementById("hasil").value = y
+        }
+
+        function clr() {
+            document.getElementById("hasil").value = ""
+        }
+    </script>
+    <style>
+        .title {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 210px;
+            color: black;
+            border: solid black 4px;
+            background-color: orangered;
+        }
+
+        input[type="button"] {
+            background-color: black;
+            color: orangered;
+            border: solid black 2px;
+            width: 100%
+        }
+
+        input[type="text"] {
+            background-color: orangered;
+            color: black;
+            border: solid black 2px;
+            width: 100%
+        }
+
+        body {
+            background-color: orangered;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon"
+        href="https://steemitimages.com/p/3W72119s5BjWMGm4Xa2MvD5AT2bJsSA8F9WeC71v1s1fKfGkK9mMKuc3LcvF4KigbWg9UsrpEPFziT4qk2mP6psC4m4R5j3Xt1wywoKZ4KuFztC69pgVav?format=match&mode=fit&width=640">
 </head>
+
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+    <div class=title>Hacktiv8 Calculator</div>
+    <table border="1">
+        <tr>
+            <td colspan="3"><input type="text" id="hasil" disabled /></td>
+            <td><input type="button" value="c" onclick="clr()" /> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="math('1')" /> </td>
+            <td><input type="button" value="2" onclick="math('2')" /> </td>
+            <td><input type="button" value="3" onclick="math('3')" /> </td>
+            <td><input type="button" value="/" onclick="math('/')" /> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="math('4')" /> </td>
+            <td><input type="button" value="5" onclick="math('5')" /> </td>
+            <td><input type="button" value="6" onclick="math('6')" /> </td>
+            <td><input type="button" value="-" onclick="math('-')" /> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="math('7')" /> </td>
+            <td><input type="button" value="8" onclick="math('8')" /> </td>
+            <td><input type="button" value="9" onclick="math('9')" /> </td>
+            <td><input type="button" value="+" onclick="math('+')" /> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="math('.')" /> </td>
+            <td><input type="button" value="0" onclick="math('0')" /> </td>
+            <td><input type="button" value="=" onclick="solve()" /> </td>
+            <td><input type="button" value="*" onclick="math('*')" /> </td>
+        </tr>
+    </table>
+    <img alt="logo"
+        src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/1879/s300/hactiv8-logo.jpg"
+        style="width: 25%">
 </body>
+
 </html>
